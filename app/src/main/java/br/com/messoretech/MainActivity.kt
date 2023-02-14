@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
@@ -27,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.cvBottomSheets.setOnClickListener {
             ModalBottomSheet.start(supportFragmentManager)
+        }
+        binding.cvBottomAppBar.setOnClickListener {
+            startActivity(TopAppBarActivity.createIntent(this))
         }
 
 
