@@ -24,20 +24,19 @@
     <!-- Note: A RecyclerView can also be used -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Qualquer Coisa"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
-            android:layout_height="wrap_content"/>
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2" />
 
         <!-- Scrollable content -->
 
 
     </androidx.core.widget.NestedScrollView>
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,6 +3,7 @@ package br.com.messoretech
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.messoretech.databinding.ActivityMainBinding
+import com.google.android.material.bottomappbar.BottomAppBar
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +30,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.cvTopAppBar.setOnClickListener {
             startActivity(TopAppBarActivity.createIntent(this))
+        }
+        binding.cvBottomAppBar.setOnClickListener {
+            startActivity(BottomAppBarActivity.createIntent(this))
         }
 
     }
