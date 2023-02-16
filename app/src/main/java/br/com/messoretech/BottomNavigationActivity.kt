@@ -23,6 +23,8 @@ class BottomNavigationActivity : AppCompatActivity() {
            }
             true
         }
+
+        binding.bottomNavigation.selectedItemId = R.id.home
     }
 
     private fun openFragment(fragment: Fragment) {
