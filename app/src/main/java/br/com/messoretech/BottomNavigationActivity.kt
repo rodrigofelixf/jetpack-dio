@@ -4,7 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import br.com.messoretech.databinding.ActivityBottomNavigationBinding
+import br.com.messoretech.fragments.HomeFragment
+import br.com.messoretech.fragments.StarFragment
 
 class BottomNavigationActivity : AppCompatActivity() {
     private val binding by lazy { ActivityBottomNavigationBinding.inflate(layoutInflater) }
@@ -15,10 +18,17 @@ class BottomNavigationActivity : AppCompatActivity() {
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
            when ( item.itemId ) {
-               R.id.home -> {}
-               R.id.star -> {}
+               R.id.home -> openFragment(HomeFragment.newInstance())
+               R.id.star -> openFragment(StarFragment.newInstance())
            }
+            true
         }
+    }
+
+    private fun openFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.container, fragment)
+        transaction.commit()
     }
 
 
