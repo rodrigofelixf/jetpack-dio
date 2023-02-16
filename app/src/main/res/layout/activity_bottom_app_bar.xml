@@ -4,11 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/imd_emprego" />
+
+
+    </androidx.core.widget.NestedScrollView>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
-        app:layout_anchor="@id/bottomAppBar"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
-        android:layout_height="wrap_content"/>
+        app:layout_anchor="@id/bottomAppBar" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
